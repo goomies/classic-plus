@@ -1,1 +1,1 @@
-# classic-plus
+# Classic Plus
