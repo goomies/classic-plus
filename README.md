@@ -1,6 +1,6 @@
-# botPlus
+# Classic Plus
 
-Bot for **World of Warcraft Classic** and **Plus**
+**World of Warcraft Classic** and **Plus**
 
 # Installation
 
@@ -8,8 +8,7 @@ Bot for **World of Warcraft Classic** and **Plus**
 2. Pillow : `pip install Pillow`
 3. Customtkinter : `pip install customtkinter` | `pip install customtkinter --upgrade`
 
-
-# Chat prompt 
+# Chat prompt
 
 Création d'un bot pour interagir avec un jeu vidéo comme World of Warcraft en lisant ce qui se passe à l'écran du joueur. Implique généralement des techniques de capture d'écran, de traitement d'image, et de simulation d'entrées utilisateur. Approche utilisant Python comme langage de programmation :
 
@@ -27,7 +26,7 @@ Création d'un bot pour interagir avec un jeu vidéo comme World of Warcraft en 
 
 7. **Détection de triche** : Assurez-vous de respecter les conditions d'utilisation du jeu, car l'utilisation de bots ou de scripts automatisés peut être contraire aux règles et entraîner des sanctions.
 
-# Roadmap 
+# Roadmap
 
 Durée estimée: **95 heures** | Temps passé: **4 heures**
 
@@ -36,7 +35,7 @@ Durée estimée: **95 heures** | Temps passé: **4 heures**
 - Sélectionnez Pillow (PIL) pour la capture d'écran. (1 heure)
 - Envisagez OpenCV pour des fonctionnalités avancées. (2 heures)
 - Incluez éventuellement PyAutoGUI pour la simulation d'entrées utilisateur. (1 heure)
-  
+
 **2. Traitement d'image** (20 heures)
 
 - Convertissez les captures d'écran en images numériques. (3 heures)
@@ -85,5 +84,3 @@ Gérez correctement les identifiants. (2 heures)
 Mettez en place un mécanisme de débogage et de log. (4 heures)
 Effectuez des tests de performance. (4 heures)
 Utiliser un VPN pour cacher son ip ou autre (1 heure)
-
-
