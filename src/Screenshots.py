@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Path where to save the screenshots
-screenshot_folder = "C:\\Users\\Goomie\\Documents\\Dev\\wow-bot-gpt\\screenshots\\"
+screenshot_folder = "C:\\Users\\Goomie\\Documents\\Dev\\classic-plus\\screenshots\\"
 
 # Capture frequency in seconds (increase this value to reduce resource consumption)
 capture_frequency = 5

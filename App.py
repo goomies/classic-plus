@@ -5,7 +5,7 @@ import customtkinter
 
 # Themes
 customtkinter.set_default_color_theme(
-    "C:/Users/Goomie/Documents\Dev/botPlus/themes/defaut.json")
+    "C:/Users/Goomie/Documents/Dev/classic-plus/themes/defaut.json")
 
 
 class App(customtkinter.CTk):
@@ -13,7 +13,7 @@ class App(customtkinter.CTk):
         super().__init__()
 
         # configure window
-        self.title("botPlus")
+        self.title("Classic PLus")
         self.geometry("1400x800+100+500")
         # configure grid layout (4x4)
         self.grid_columnconfigure(1, weight=1)
