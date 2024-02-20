@@ -12,12 +12,12 @@ class GridItem:
         self.id = id
         self.name = None
         # self.image_file_name = None
-        self.examples = []
+        self.items = []
         self.description = None
         self.parent = None
 
 
-class ExampleItem:
+class Item:
     def __init__(self):
         self.name = None
         self.file_name = None
@@ -97,16 +97,16 @@ class GalleryData:
                             grid_item.description = module.description
                             grid_item.parent = control_group_dir
                         else:
-                            example_item = ExampleItem()
-                            example_item.example = module.example
+                            item = Item()
+                            item.example = module.layout
 
-                            example_item.file_name = (
+                            item.file_name = (
                                 module_name.replace(".", "/") + ".py"
                             )
-                            example_item.name = "See code on github"
-                            example_item.order = file[
+                            item.name = "See code on github"
+                            item.order = file[
                                 :2
                             ]  # first 2 characters of example file name (e.g. '01')
-                            grid_item.examples.append(example_item)
-                grid_item.examples.sort(key=lambda x: x.order)
+                            grid_item.items.append(item)
+                grid_item.items.sort(key=lambda x: x.order)
                 control_group_dir.grid_items.append(grid_item)

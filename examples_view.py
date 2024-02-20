@@ -39,7 +39,7 @@ class ExamplesView(ft.Column):
         self.control_name_text.value = grid_item.name
         self.control_description.value = grid_item.description
 
-        for example in grid_item.examples:
+        for example in grid_item.items:
             self.examples.controls.append(
                 ft.Column(
                     controls=[

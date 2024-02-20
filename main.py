@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 async def main(page: ft.Page):
     page.window_width = 655
     page.window_height = 350
-    page.window_resizable = False
+    page.window_resizable = True
     page.title = "Classic Plus"
     page.fonts = {
         "Roboto Mono": "RobotoMono-VariableFont_wght.ttf",
