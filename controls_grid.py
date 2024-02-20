@@ -41,7 +41,7 @@ class ControlsGrid(ft.GridView):
                         alignment=ft.MainAxisAlignment.START,
                         vertical_alignment=ft.MainAxisAlignment.CENTER,
                         controls=[
-                            ft.Icon(name=ft.icons.FOLDER_OPEN),
+                            ft.Icon(name=ft.icons.ATTACH_MONEY),
                             ft.Text(
                                 value=grid_item.name,
                                 weight=ft.FontWeight.W_500,

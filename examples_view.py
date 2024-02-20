@@ -59,7 +59,7 @@ class ExamplesView(ft.Column):
                                             height=24,
                                             color=ft.colors.ON_SURFACE,
                                         ),
-                                        url=f"https://github.com/flet-dev/examples/blob/main/python/apps/controls-gallery/{example.file_name}",
+                                        url=f"https://github.com/goomies/classic-plus/tree/main/{example.file_name}",
                                         url_target="_blank",
                                     ),
                                 ],

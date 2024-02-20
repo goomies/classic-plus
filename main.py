@@ -1,6 +1,5 @@
 import logging
 from pathlib import Path
-
 import flet as ft
 import flet_fastapi
 from gallerydata import GalleryData
@@ -14,9 +13,10 @@ logging.basicConfig(level=logging.INFO)
 
 
 async def main(page: ft.Page):
-
+    page.window_width = 655
+    page.window_height = 350
+    page.window_resizable = False
     page.title = "Classic Plus"
-
     page.fonts = {
         "Roboto Mono": "RobotoMono-VariableFont_wght.ttf",
     }
@@ -57,11 +57,8 @@ async def main(page: ft.Page):
         await page.update_async()
 
     left_nav = LeftNavigationMenu(gallery=gallery)
-
     controls_grid = ControlsGrid(gallery=gallery)
-
     examples_view = ExamplesView(gallery=gallery)
-
     page.theme_mode = ft.ThemeMode.DARK
     page.on_error = lambda e: print("Page error:", e.data)
 

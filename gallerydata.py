@@ -43,8 +43,8 @@ class GalleryData:
         ControlGroup(
             name="scripts",
             label="Scripts",
-            icon=ft.icons.GRID_VIEW,
-            selected_icon=ft.icons.GRID_VIEW_SHARP,
+            icon=ft.icons.DESCRIPTION,
+            selected_icon=ft.icons.DESCRIPTION_SHARP,
         ),
     ]
 
@@ -103,7 +103,7 @@ class GalleryData:
                             example_item.file_name = (
                                 module_name.replace(".", "/") + ".py"
                             )
-                            example_item.name = module.name
+                            example_item.name = "See code on github"
                             example_item.order = file[
                                 :2
                             ]  # first 2 characters of example file name (e.g. '01')

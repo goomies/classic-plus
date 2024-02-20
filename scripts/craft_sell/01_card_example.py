@@ -1,7 +1,5 @@
 import flet as ft
 
-name = "Card example"
-
 
 def example():
     return ft.Card(
@@ -9,14 +7,15 @@ def example():
             content=ft.Column(
                 [
                     ft.ListTile(
-                        leading=ft.Icon(ft.icons.ALBUM),
-                        title=ft.Text("The Enchanted Nightingale"),
+                        leading=ft.Icon(ft.icons.AUTO_FIX_HIGH),
+                        title=ft.Text("Greater Magic Wand"),
                         subtitle=ft.Text(
-                            "Music by Julie Gable. Lyrics by Sidney Stein."
+                            "Buy Greater Magic Essence at 15s."
                         ),
                     ),
                     ft.Row(
-                        [ft.TextButton("Buy tickets"), ft.TextButton("Listen")],
+                        [ft.TextButton("Start"),
+                         ft.TextButton("Stop")],
                         alignment=ft.MainAxisAlignment.END,
                     ),
                 ]

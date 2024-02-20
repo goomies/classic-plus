@@ -14,3 +14,7 @@ Use `--user` after commands if you have a permission issues
 
 1. Standar : `python main.py`
 2. Hot reload : `flet run main.py -d`
+
+# Packaging desktop app
+
+Build your app : `flet flet build windows --name classic_plus`
