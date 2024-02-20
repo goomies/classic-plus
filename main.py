@@ -59,6 +59,7 @@ async def main(page: ft.Page):
     left_nav = LeftNavigationMenu(gallery=gallery)
     controls_grid = ControlsGrid(gallery=gallery)
     examples_view = ExamplesView(gallery=gallery)
+
     page.theme_mode = ft.ThemeMode.DARK
     page.on_error = lambda e: print("Page error:", e.data)
 
