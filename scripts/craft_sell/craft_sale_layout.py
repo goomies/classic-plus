@@ -12,11 +12,34 @@ def clic_position(x, y):
     pyautogui.click(x, y)
 
 
+def clic_position_percent(x_percent, y_percent):
+    # Récupère la résolution de l'écran
+    screen_width, screen_height = pyautogui.size()
+    # Calcule la position x en pourcentage
+    x = int(screen_width * (x_percent / 100))
+    # Calcule la position y en pourcentage
+    y = int(screen_height * (y_percent / 100))
+    pyautogui.click(x, y)  # Effectue le clic à la position calculée
+
+
 def start_auto_clic():
     global clic_auto_actif
     clic_auto_actif = True
     while clic_auto_actif:
-        clic_position(1060, 1300)  # Clic à la position spécifiée
+        # Clic droit sur le vendeur
+        clic_position(10, 10)
+        clic_position(10, 10)
+        time.sleep(1)
+        pyautogui.rightClick(10, 10)
+        pyautogui.rightClick(10, 10)
+        time.sleep(1)
+        # Clic pour parler au vendeur
+        clic_position_percent(50, 61)
+        clic_position_percent(50, 61)
+        time.sleep(3)
+        # Clic maccrox
+        clic_position(20, 120)
+        clic_position(20, 120)
         time.sleep(12)  # Attente de 12 secondes entre chaque clic
 
 

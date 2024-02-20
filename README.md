@@ -17,4 +17,4 @@ Use `--user` after commands if you have a permission issues
 
 # Packaging desktop app
 
-Build your app : `flet flet build windows --name classic_plus`
+Build your app : `flet build windows --name classic_plus`
