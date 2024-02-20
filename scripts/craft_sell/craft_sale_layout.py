@@ -28,19 +28,15 @@ def start_auto_clic():
     while clic_auto_actif:
         # Clic droit sur le vendeur
         clic_position(10, 10)
-        clic_position(10, 10)
-        time.sleep(1)
-        pyautogui.rightClick(10, 10)
         pyautogui.rightClick(10, 10)
         time.sleep(1)
         # Clic pour parler au vendeur
         clic_position_percent(50, 61)
         clic_position_percent(50, 61)
-        time.sleep(3)
         # Clic maccrox
         clic_position(20, 120)
         clic_position(20, 120)
-        time.sleep(12)  # Attente de 12 secondes entre chaque clic
+        time.sleep(10)  # Attente de 12 secondes entre chaque clic
 
 
 def stop_auto_clic():
@@ -71,7 +67,7 @@ def layout():
                         leading=ft.Icon(ft.icons.AUTO_FIX_HIGH),
                         title=ft.Text("Auto craft & Sell"),
                         subtitle=ft.Text(
-                            "every 12 secondes craft, Sell a Greater Magic Wand and buy one Simple Wood"
+                            "every 12 secondes craft, Sell a Greater Magic Wand and buy one Simple Wood."
                         ),
                     ),
                     ft.Row(
