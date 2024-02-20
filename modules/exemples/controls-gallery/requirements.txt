@@ -1,0 +1,5 @@
+flet-fastapi==0.20.0
+flet-contrib
+gunicorn
+uvicorn
+hypercorn
