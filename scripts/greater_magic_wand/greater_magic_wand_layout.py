@@ -8,8 +8,12 @@ clic_auto_actif = False
 
 
 def clic_position(x, y):
-    # Déplace le curseur à la position spécifiée (x, y) et effectue un clic
-    pyautogui.click(x, y)
+    # Déplace d'abord le curseur à la position spécifiée
+    pyautogui.moveTo(x, y)
+    # Attend un court instant pour que le curseur ait le temps de se déplacer
+    time.sleep(0.5)
+    # Effectue ensuite le clic à la position actuelle du curseur
+    pyautogui.click()
 
 
 def clic_position_percent(x_percent, y_percent):
@@ -19,6 +23,11 @@ def clic_position_percent(x_percent, y_percent):
     x = int(screen_width * (x_percent / 100))
     # Calcule la position y en pourcentage
     y = int(screen_height * (y_percent / 100))
+    # Déplace d'abord le curseur à la position spécifiée
+    pyautogui.moveTo(x, y)
+    # Attend un court instant pour que le curseur ait le temps de se déplacer
+    time.sleep(0.5)
+    # Effectue ensuite le clic à la position actuelle du curseur
     pyautogui.click(x, y)  # Effectue le clic à la position calculée
 
 
@@ -26,17 +35,18 @@ def start_auto_clic():
     global clic_auto_actif
     clic_auto_actif = True
     while clic_auto_actif:
-        # Clic droit sur le vendeur
+        # Selectionne sur le vendeur
         clic_position(10, 10)
+        # Parle au vendeur
         pyautogui.rightClick(10, 10)
-        time.sleep(1)
-        # Clic pour parler au vendeur
-        clic_position_percent(50, 61)
-        clic_position_percent(50, 61)
-        # Clic maccrox
+        time.sleep(2)
+        # Ouvre l'inventaire du vendeur
+        clic_position_percent(50, 62)
+        time.sleep(2)
+        # Clic maccro
         clic_position(20, 120)
-        clic_position(20, 120)
-        time.sleep(10)  # Attente de 12 secondes entre chaque clic
+        # Attente de 12 secondes pout la création de la baguette
+        time.sleep(12)
 
 
 def stop_auto_clic():
@@ -67,7 +77,7 @@ def layout():
                         leading=ft.Icon(ft.icons.AUTO_FIX_HIGH),
                         title=ft.Text("Auto craft & Sell"),
                         subtitle=ft.Text(
-                            "every 12 secondes craft, Sell a Greater Magic Wand and buy one Simple Wood."
+                            "Loop to craft & sell a Greater Magic Wand and buy one Simple Wood."
                         ),
                     ),
                     ft.Row(
@@ -84,11 +94,3 @@ def layout():
             padding=10,
         )
     )
-
-
-def main():
-    layout()
-
-
-if __name__ == "__main__":
-    main()
