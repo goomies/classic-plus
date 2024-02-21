@@ -16,7 +16,9 @@ World of Warcraft Classic & Plus
 Use `--user` after commands if you have a permission issues
 
 2. Pillow : `pip install Pillow`
-3. Flet : `pip install flet`
+3. flet : `pip install flet`
+4. flet-fastapi : `pip install flet-fastapi`
+5. pyautogui : `pip install pyautogui`
 
 # Run
 
