@@ -26,7 +26,6 @@ class ControlsGrid(ft.GridView):
         self.find_control_group_object(control_group_name)
         # left_nav.rail.selected_index = gallery.destinations_list.index(control_group)
         self.visible = True
-        # examples.visible = False
         self.controls = []
         # listview.controls = []
         for grid_item in self.control_group.grid_items:
@@ -41,7 +40,7 @@ class ControlsGrid(ft.GridView):
                         alignment=ft.MainAxisAlignment.START,
                         vertical_alignment=ft.MainAxisAlignment.CENTER,
                         controls=[
-                            ft.Icon(name=ft.icons.ATTACH_MONEY),
+                            ft.Icon(name=grid_item.icon),
                             ft.Text(
                                 value=grid_item.name,
                                 weight=ft.FontWeight.W_500,

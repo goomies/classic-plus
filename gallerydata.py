@@ -11,7 +11,6 @@ class GridItem:
     def __init__(self, id):
         self.id = id
         self.name = None
-        # self.image_file_name = None
         self.items = []
         self.description = None
         self.parent = None
@@ -21,8 +20,9 @@ class Item:
     def __init__(self):
         self.name = None
         self.file_name = None
+        self.icon = None
         self.order = None
-        self.example = None
+        self.layout = None
         self.source_code = None
 
 
@@ -95,10 +95,11 @@ class GalleryData:
                         if file == "index.py":
                             grid_item.name = module.name
                             grid_item.description = module.description
+                            grid_item.icon = module.icon
                             grid_item.parent = control_group_dir
                         else:
                             item = Item()
-                            item.example = module.layout
+                            item.layout = module.layout
 
                             item.file_name = (
                                 module_name.replace(".", "/") + ".py"

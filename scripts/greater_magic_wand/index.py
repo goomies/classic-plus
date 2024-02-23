@@ -1,3 +1,3 @@
 name = "Enchant | GMW"
-image_file = "column.svg"
+icon = "AUTO_FIX_HIGH"
 description = """Greater Magic Wand, buy Greater Magic Essence < 15s."""

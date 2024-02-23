@@ -5,7 +5,7 @@ import flet_fastapi
 from gallerydata import GalleryData
 from left_navigation_menu import LeftNavigationMenu
 from controls_grid import ControlsGrid
-from examples_view import ExamplesView
+from layouts_view import LayoutsView
 
 gallery = GalleryData()
 
@@ -32,9 +32,9 @@ async def main(page: ft.Page):
         elif len(route_list) == 1:
             await display_controls_grid(control_group_name=route_list[0])
         elif len(route_list) == 2:
-            examples_view.control_group_name = route_list[0]
-            examples_view.control_name = route_list[1]
-            await display_control_examples()
+            layouts_view.control_group_name = route_list[0]
+            layouts_view.control_name = route_list[1]
+            await display_control_layouts()
         else:
             print("Invalid route")
 
@@ -43,14 +43,14 @@ async def main(page: ft.Page):
         left_nav.rail.selected_index = gallery.destinations_list.index(
             controls_grid.control_group
         )
-        examples_view.visible = False
-        examples_view.examples.controls = []
+        layouts_view.visible = False
+        layouts_view.layouts.controls = []
         await page.update_async()
 
-    async def display_control_examples():
-        examples_view.display()
+    async def display_control_layouts():
+        layouts_view.display()
         left_nav.rail.selected_index = gallery.destinations_list.index(
-            examples_view.control_group
+            layouts_view.control_group
         )
         controls_grid.visible = False
 
@@ -58,7 +58,7 @@ async def main(page: ft.Page):
 
     left_nav = LeftNavigationMenu(gallery=gallery)
     controls_grid = ControlsGrid(gallery=gallery)
-    examples_view = ExamplesView(gallery=gallery)
+    layouts_view = LayoutsView(gallery=gallery)
 
     page.theme_mode = ft.ThemeMode.DARK
     page.on_error = lambda e: print("Page error:", e.data)
@@ -66,7 +66,7 @@ async def main(page: ft.Page):
     await page.add_async(
         ft.Row(
             [left_nav, ft.VerticalDivider(
-                width=1), controls_grid, examples_view],
+                width=1), controls_grid, layouts_view],
             expand=True,
         )
     )

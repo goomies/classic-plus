@@ -80,7 +80,8 @@ async def main(page: ft.Page):
 
     await page.add_async(
         ft.Row(
-            [left_nav, ft.VerticalDivider(width=1), controls_grid, examples_view],
+            [left_nav, ft.VerticalDivider(
+                width=1), controls_grid, examples_view],
             expand=True,
         )
     )
